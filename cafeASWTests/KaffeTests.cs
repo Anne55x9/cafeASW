@@ -46,6 +46,20 @@ namespace cafeASW.Tests
 
             kaffeListe.Add(cortado);
             kaffeListe.Add(latte);
+
+            foreach (var kaf in kaffeListe)
+            {
+                //Her ses objektet som cortado og derfor kan alle cortado metoder ses.
+                if(kaf is Cortado)
+                {
+                    var kafCord = kaf as Cortado;
+                    kafCord.Pris();
+                }
+                    
+                ///Her se objektet via IMælk interfaset og kun metoden mlMælk kan ses. 
+                kaf.MlMælk();
+            }
+
             //Assert
             
         }

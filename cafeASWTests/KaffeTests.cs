@@ -15,7 +15,7 @@ namespace cafeASW.Tests
         public void PrisTestKaffe()
         {
             //arrange
-            var kaffe = new Kaffe();
+            var kaffe = new SortKaffe();
             //Act
             int pris = kaffe.Pris();
             //Assert
@@ -26,7 +26,7 @@ namespace cafeASW.Tests
         public void StyrkeTestKaffe()
         {
             //arrange
-            var kaffe = new Kaffe();
+            var kaffe = new SortKaffe();
             //Act
             string styrke = kaffe.Styrke();
             //Assert

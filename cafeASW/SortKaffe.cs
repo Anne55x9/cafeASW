@@ -10,7 +10,23 @@ namespace cafeASW
     {
         public override int Pris()
         {
-            return 20;
+            int prisMedRabat = 20 - Rabat;
+
+            if (prisMedRabat <= 0)
+                throw new ArgumentException("Upps du gav for meget rabat.");
+
+            return prisMedRabat;
+        }
+
+        public SortKaffe()
+        {
+
+        }
+
+        public SortKaffe(int rabat)
+            :base(rabat)
+        {
+
         }
     }
 }

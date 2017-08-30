@@ -32,5 +32,22 @@ namespace cafeASW.Tests
             //Assert
             Assert.AreEqual("Stærk.", styrke);
         }
+
+        [TestMethod()]
+        public void TestKaffeListe()
+        {
+            //arrange
+            var kaffeListe = new List<Imælk>();
+            //Act
+            var cortado = new Cortado();
+            var latte = new Latte();
+
+            //Disse to kaffer kan tilføjes listen af typen Imælk fordi de implemterer interfaset Imælk. 
+
+            kaffeListe.Add(cortado);
+            kaffeListe.Add(latte);
+            //Assert
+            
+        }
     }
 }
